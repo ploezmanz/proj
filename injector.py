@@ -76,7 +76,7 @@ class injector:
         if self.AThread_NetData:
            if self.firewall(self.AThread_NetData):
               if 'HTTP/1.1' in self.AThread_NetData.splitlines()[0] and self.AThread_NetData.startswith('CONNECT'):
-                  self.client.send('HTTP/1.0 200 Connection Established\r\n\r\n')
+                  self.client.send('HTTP/1.1 200 Connection Established\r\n\r\n')
                   self.Run_Programs()
               else:
                   self.Run_Programs()
