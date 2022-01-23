@@ -119,7 +119,7 @@ class injector:
                     out = None
                     try:
                         pack = bite.recv(int(B))
-                        data = pack.replace('Connection: Close', 'Connection: Keep-Alive')
+                        data = pack.replace('HTTP/1.1 101 Switching Protocols', 'HTTP/1.1 200 Connection Established')
                     except socket.error:
                         break
                     if data:
