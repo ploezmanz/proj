@@ -4,12 +4,13 @@ config = ConfigParser.ConfigParser()
 config.read('%s' % (path)) 
 LP = config.get('GENERAL','ListenPort')
 B = config.get('GENERAL','Buffer')
-K = config.get('GENERAL','KET')
-Ket = '%s' %K
-Ket = Ket.replace('#;','\r\n')
-print Ket + '\n6. Manual\n'
-time.sleep(0.5)
-Profil = raw_input ('Enter No: ')
+#K = config.get('GENERAL','KET')
+#Ket = '%s' %K
+#Ket = Ket.replace('#;','\r\n')
+#print Ket + '\n6. Manual\n'
+#time.sleep(0.5)
+#Profil = raw_input ('Enter No: ')
+Profil = 1
 if Profil == '1':
     Proxy = config.get('PROFIL 1','Proxy')
     Payload = config.get('PROFIL 1','Payload')
@@ -58,15 +59,16 @@ Pay = Pay.replace(';','\n')
 time.sleep(0.5)
 print '\n[MODE INJECT]\n1. Front Inject\n2. Back Inject \n'
 time.sleep(0.5)
-menu = raw_input('Enter No:  ')
-if menu == '1':
-    Po = 1
-    print 'Menggunakan Mode Front Inject'
-elif menu == '2':
-    Po = 2
-    print 'Menggunakan Mode Back Inject'
-else:
-            sys.exit()
+#menu = raw_input('Enter No:  ')
+Po = 1
+#if menu == '1':
+#    Po = 1
+#    print 'Menggunakan Mode Front Inject'
+#elif menu == '2':
+#    Po = 2
+#    print 'Menggunakan Mode Back Inject'
+#else:
+#            sys.exit()
 class injector:
     def __init__(self, request, address):
         self.client = request
